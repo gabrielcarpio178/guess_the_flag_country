@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Flag</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body onload="fetchData()">      
+    <main class="main-container">  
+        
+        <div class="loader-content" id="loader">
+            <div class="loader"></div>
+            <div class="text-loading">Waiting for Connection...</div>
+        </div>  
+              
+        <section class="header-content">
+            <h1>Guess the Flag</h1>
+        </section>
+        
+        <section class="flag-content">
+            <img src="" alt="flag" id="flag_data">
+            <div class="answer-name" id="result_">
+                
+            </div>
+        </section>
+        
+        <section class="score-content">
+            <h2>Score: <span id="score"></span></h2>
+            <div>Life: <span id="life"></span></div>
+        </section>
+        <form id="submit_form">
+            <section class="choices-content" id="dataChoice">
+                        
+            
+            </section> 
+            <div class="error" id="error"></div>
+            <input type="submit" value="Submit" class="btn_submit" id="submitBtn">
+        </form>
+        <button class="btn_submit" id="next">
+            NEXT
+        </button>
+        
+        
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>    
+<script src="js/index.js"></script>    
+</body>
+</html>

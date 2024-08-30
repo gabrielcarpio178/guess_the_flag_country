@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Nerko One", Arial;
+}
+.header-content{
+    font-size: 2rem; 
+    padding: 4% 0; 
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 5%;
+    background-color: white; 
+    height: 100vh; 
+}
+.score-content{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flag-content{
+    background: #eee;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+    border-radius: 5px/5px;
+    padding: 2%;
+    width: 100%;
+    height: 20vh;
+}
+.flag-content > img{
+    min-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+}
+.flag-content > div{
+   text-align: center;
+   font-size: 1.5rem;
+}
+form{
+    width: 100%;
+}
+
+.choices-content{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+}
+
+.choose{
+    padding: 5% 4%;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+    border-radius: 5px/5px;
+    display: flex;
+    flex-direction: row;
+    gap: 0 10px;
+}
+.error{
+    color: red;
+}
+
+.btn_submit{
+    background-color: #3868de;
+    border: none;
+    border-radius: 5px/5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+    padding: 2% 4%;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 3%;
+}
+.btn_submit:active {
+  background-color: #8098ff;
+  box-shadow: 0 3px 6px #666;
+  transform: translateY(4px);
+}
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"]:checked+label{
+    background-color: #3868de;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.wrong{        
+    background-color: #f81f00d9;
+    position: relative;
+}
+.wrong::before{
+    content: "\00d7";
+    position: absolute;
+    right: 3%;
+    font-size: 2.5rem;
+    top: 0;
+}
+.correct{
+    background-color: #ff0034e4;
+    position: relative;
+}
+.correct::before{
+    content: "\2713";
+    position: absolute;
+    right: 3%;
+}
+
+
+/*loading*/
+.loader-content{
+  position: absolute;
+  width: 100%;
+  height: 100%;    
+  background-color: white;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px 0;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin:0 auto;
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.text-loading{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
